@@ -24,4 +24,26 @@ section03> node ./index.js
 index.js를 src 폴더에 옮기고
 package.json에서 "start" : "node src/index.js"; 추가
 
-section03> npm run start
+section03> npm run start 
+
+* 라이브러리
+https://www.npmjs.com/
+
+* randomcolor 설치하기
+https://www.npmjs.com/package/randomcolor
+
+* randomcolor install 복사
+section03> npm i randomcolor
+
+package.json dependencies 추가 (의존)
+  "dependencies": {
+    "randomcolor": "^0.6.2"
+  }
+
+* 생성되는 파일
+package-lock.json: 라이브러리의 정확한 버전 정보
+node_modules: 설치한 라이브러리가 저장되는 곳
+
+* dependencies 기준으로 라이브러리 다시 설치하기
+section03> npm install
+section03> npm i

@@ -1,5 +1,11 @@
 // package.json에 "start": "node src/index.js" 추가
 
+//randomcolor
+import randomColor from "randomcolor";
+
+const color = randomColor();
+console.log(color);
+
 //CJS
 const moduleData =  require("./math");
 
