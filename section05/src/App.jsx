@@ -1,30 +1,30 @@
 import './App.css'
-import Header from './components/Header';
-import Main from './components/Main';
-import Footer from './components/Footer';
-import Button from './components/Button';
+import {useState} from "react";
 
 function App() {
-  const buttonProps = {
-    text: "메일",
-    color: "green",
-    a: 1,
-    b: 2,
-    c: 3,
-  };
-
+  //컴포넌트 내에 새로운 스테이트를 생성
+  const [count, setCount] = useState(0);
+  const [light, setLight] = useState("OFF");
+  
   return (
-    <>  
-      {/* Spread 연산자 */}
-      <Button {...buttonProps} />
-      <Button text={"카페"}>
-        <div>자식요소</div>
-      </Button>
-      <Button text={"블로그"}>
-        <Header />
-      </Button>
-    </>
-  )
+  <>
+    <div>
+      <h1>{light}</h1>
+      <button onClick={() => {
+        setLight(light === "ON" ? "OFF" : "ON");
+      }}>
+        {light === "ON" ? "끄기" : "켜기"}</button>
+    </div>
+
+    <div>
+      <h1>{count}</h1> 
+      <button onClick={()=>{
+        //상태변화 함수, 인수: 변경하고자 하는 값
+        setCount(count + 1);
+      }}>+</button>
+    </div>
+  </>
+  );
 }
 
 export default App
