@@ -1,0 +1,27 @@
+Node.js: JavaScript 실행 환경(Run Time) = 구동기
+
+* 설치하기
+https://nodejs.org/en
+짝수로 된 LTS ver
+
+* cmd
+node -v 
+npm -v
+
+* Project
+패키지: Node.js에서 사용하는 프로그램의 단위
+
+* VScode 터미널
+section03> npm init 하면 package.json이 만들어진다
+
+index.js를 만들고 console.log("안녕 Node.js");
+
+* 실행
+section03> node ./index.js
+안녕 Node.js 
+
+* 경로 설정하기
+index.js를 src 폴더에 옮기고
+package.json에서 "start" : "node src/index.js"; 추가
+
+section03> npm run start
