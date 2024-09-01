@@ -1,6 +1,11 @@
+import { useParams } from "react-router-dom";
+
 const Edit = () => {
+    const params = useParams();
+    console.log(params);
+
     return (
-        <div></div>
+        <div>{params.id}번 일기 수정입니다</div>
     );
 }
 
