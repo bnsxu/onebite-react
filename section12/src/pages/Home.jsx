@@ -1,11 +1,16 @@
-import { useSearchParams } from "react-router-dom";
+import Header from "../components/Heager";
+import Button from "../components/Button";
+import DiaryList from "../components/DiaryList";
 
 const Home = () => {
-    const [params, setParams] = useSearchParams();
-    console.log(params.get("value"));
-
     return (
-        <div>Home</div>
+        <div>
+            <Header title={"2024년 2월"} 
+            leftChild={<Button text={"<"} />}
+            rightChild={<Button text={">"} />}
+            />
+            <DiaryList />
+        </div>
     );
 }
 
